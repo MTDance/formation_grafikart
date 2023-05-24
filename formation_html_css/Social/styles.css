@@ -1,3 +1,114 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+p {
+  margin: 1em 0;
+}
+
 *,
 *::before,
 ::after {
@@ -61,16 +172,25 @@ a {
 }
 
 .sidebar {
+  font-size: 12px;
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 20px;
+}
+
+.main {
+  margin-bottom: 20px;
+}
+
+.profil {
+  display: none;
 }
 
 .sidebar a {
   display: block;
   width: 50%;
   padding: 0.6em 0;
-  transition: 3s;
+  transition: color 0.3s;
   border: solid 1px transparent;
   padding-left: 10px;
 }
@@ -88,7 +208,7 @@ a {
   transition: opacity 0.3s;
 }
 
-.sidebar .sidebar-message::before {
+.sidebar .sidebar-messages::before {
   background-image: url(img/messages.svg);
 }
 
@@ -98,6 +218,10 @@ a {
 
 .sidebar .sidebar-group::before {
   background-image: url(img/group.svg);
+}
+
+.sidebar a:hover {
+  text-decoration: underline;
 }
 
 .sidebar a:hover,
@@ -144,7 +268,7 @@ a {
   font-weight: bold;
   color: #000;
   font-size: 18px;
-  margin: 5px 0;
+  margin-bottom: 5px;
 }
 
 .card-date {
@@ -153,7 +277,7 @@ a {
 }
 
 .card-body {
-  padding: 0 10px 20px 10px;
+  padding: 10px 20px 10px;
 }
 
 .card-body a {
@@ -213,6 +337,7 @@ a {
   margin-bottom: 18px;
   color: black;
   font-size: 15px;
+  font-weight: bold;
 }
 
 .sidebar-title::after {
@@ -220,7 +345,7 @@ a {
   display: block;
   height: 1px;
   width: 100%;
-  margin: top 4px;
+  margin-top: 4px;
   background: #000;
 }
 
@@ -246,6 +371,12 @@ a {
   font-weight: bold;
   color: #000;
   font-size: 15px;
+  margin-bottom: 5px;
+}
+
+.friend-connections {
+  color: rgba(0, 0, 0, 0.38);
+  font-size: 12px;
 }
 
 .friend-add {
@@ -253,6 +384,7 @@ a {
   font-size: 12px;
   color: #000;
   margin-top: auto;
+  margin-bottom: 3px;
 }
 
 .friend-add::before {
@@ -286,6 +418,10 @@ a {
 @media only screen and (min-width: 950px) {
   .site {
     display: flex;
+  }
+
+  .profil {
+    display: block;
   }
 
   .sidebar {
