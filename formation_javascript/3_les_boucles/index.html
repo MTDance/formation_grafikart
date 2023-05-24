@@ -1,0 +1,40 @@
+18<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les boucles</title>
+</head>
+<body>
+    
+    <script>
+      /*
+      boucle à ne pas faire sur le navigateur:
+
+      let i = 0;
+        while (i < 10) {
+         console.log('Bonjour' + i)
+         i = i + 1
+        }
+
+
+      */
+        
+      let guess = 8
+      let chiffre
+      while(true) {
+         chiffre = prompt('Votre chiffre') *1
+         if (chiffre < guess) {
+            console.log('Plus')
+         } else if (chiffre > guess) {
+            console.log('Moins')
+         } else {
+            break
+         }
+      }
+      console.log('Bravo! Vous avez deviné')
+
+    </script>
+</body>
+</html>

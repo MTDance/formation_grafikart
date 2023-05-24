@@ -1,0 +1,69 @@
+18<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les conditions</title>
+</head>
+<body>
+    
+    <script>
+        /**
+         * 
+         * Exemple 1
+         * 
+        const age = 13
+        const pays = 'US'
+        const peutConduiteFrance = pays === 'FR' && age >= 18
+        const peutConduiteUS = pays === 'US' && age >= 16
+
+     if (peutConduiteFrance) {
+        console.log("Vous avez le droit de conduire en france")
+     } else if (peutConduiteUS){
+        console.log("Vous avez le droit de conduire aux Etat Unis")
+     } else {
+        console.log ("Vous n'avez pas le droit de conduire")
+     }
+         * 
+         * */
+        
+
+         /***
+          * 
+          exemple 2
+
+        const year =2022
+         const birthyear = prompt('Quel est votre année de naissance?')
+         const age = year - birthyear
+
+         if (age <= 13) {
+            console.log("lilo et stich")
+         } else if (age < 18){
+            console.log('matrix')
+         } else {
+            console.log('Evil Dead')
+         }
+
+          * 
+          * */
+       
+         const a = prompt('entrez un premier nombre')
+         const b = prompt('entrez un second nombre')
+         const result = a * b
+         let signe
+         if (isNAN(result)){
+            console.log(`Opération impossible: ${a}x${b}`)
+         } else {
+            if (result >= 0) {
+                signe = 'positif'
+            } else {
+                signe = 'négatif'
+         }
+         console.log(`${a}x${b}=${result} est ${signe}`)
+         }
+         
+
+    </script>
+</body>
+</html>
